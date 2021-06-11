@@ -17,3 +17,14 @@ public class OptionMenu extends Account {
       try {
         data.put(952141, 191904);
         data.put(989947, 71976);
+        
+        System.out.println("Welcome to the ATM Project!");
+        System.out.println("Enter your customer Number");
+        setCustomerNumber(menuInput.nextInt());
+        
+        System.out.print("Enter your PIN Number: ");
+        setPinNumber(menuInput.nextInt());
+      } catch (Exception e) {
+        System.out.println("\n" + "Invalid Character(s). Only Numbers." + "\n");
+        x = 2;
+      }
