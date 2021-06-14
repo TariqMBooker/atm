@@ -100,7 +100,19 @@ public class Account {
   }
   
   public void getSavingDepositInput() {
-    System.out.println("Saving Account Balance: "
+    System.out.println("Saving Account Balance: " + moneyFormat.format(savingBalanc
+    System.out.print("Amount you want to Deposit from saving Account: ");
+    double amount = input.nextDouble();
+    
+    if ((savingBalance + amount) >= 0) {
+      calcSavingDeposit(amount);
+      System.out.println("New saving Account Balance: " + moneyFormat.format(savi
+    } else {
+      System.out.println("Balance Cannot be Negative." + "\n");
+    }
+  }
+  
+}
   
     
     
